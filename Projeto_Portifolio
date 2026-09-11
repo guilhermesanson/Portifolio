@@ -1,33 +1,62 @@
-<header>
-   
-</header>
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-<nav>
-  
-</nav>
+<head>
+    <meta charset="UTF-8">
+    <title>Portfólio</title>
+</head>
 
-<main>
-    <section id="sobre">
-      
-    </section>
+<body>
 
-    <section id="formacao">
-       
-    </section>
+    <header>
+        <h1></h1>
+    </header>
 
-    <section id="conhecimentos">
-     
-    </section>
+    <main>
 
-    <section id="projetos">
-        
-    </section>
+        <section>
+            <img src="foto.jpg" alt="Foto">
 
-    <section id="contato">
-      
-    </section>
-</main>
+            <h2>Sobre mim</h2>
+            <p></p>
+        </section>
 
-<footer>
-   
-</footer>
+        <section>
+            <h2>Formação</h2>
+            <p></p>
+        </section>
+
+        <section>
+            <h2>Conhecimentos</h2>
+
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Projetos e experiências</h2>
+            <p></p>
+        </section>
+
+        <section>
+            <h2>Contato</h2>
+
+            <p>
+                E-mail:
+                <a href=""></a>
+            </p>
+
+            <p>
+                LinkedIn:
+                <a href=""></a>
+            </p>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
