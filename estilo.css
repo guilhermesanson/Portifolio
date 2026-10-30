@@ -1,0 +1,525 @@
+/* Base: uma folha externa, sem frameworks ou estilos inline. */
+:root {
+    --fundo: #f6f5f0;
+    --superficie: #ffffff;
+    --texto: #202d28;
+    --secundario: #53625b;
+    --verde: #214d40;
+    --verde-claro: #e6ece5;
+    --linha: #d6dcd3;
+    --acento: #b8da91;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+p,
+figure {
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+    text-wrap: balance;
+}
+
+h1 {
+    max-width: 12ch;
+    font-size: clamp(2.75rem, 5.6vw, 4.65rem);
+}
+
+h1 span {
+    color: var(--verde);
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+p + p {
+    margin-top: 1rem;
+}
+
+a {
+    color: var(--verde);
+    text-underline-offset: 0.25em;
+    overflow-wrap: anywhere;
+}
+
+.container {
+    width: min(1120px, calc(100% - 96px));
+    margin-inline: auto;
+}
+
+.sobretitulo,
+.etiqueta,
+.numero-secao {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.sobretitulo {
+    margin-bottom: 1.5rem;
+    color: var(--verde);
+}
+
+.apresentacao {
+    padding-block: 5rem;
+}
+
+.apresentacao-resumo {
+    max-width: 44ch;
+    margin-block: 1.75rem 2rem;
+    color: var(--secundario);
+    font-size: 1.1rem;
+}
+
+.botao {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.75rem;
+    min-height: 48px;
+    padding: 0.8rem 1.25rem;
+    border: 1px solid var(--verde);
+    border-radius: 4px;
+    background-color: var(--verde);
+    color: var(--superficie);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.retrato {
+    max-width: 300px;
+}
+
+.retrato img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center 43%;
+    border-radius: 8px;
+}
+
+.retrato figcaption {
+    margin-top: 0.9rem;
+    color: var(--secundario);
+    font-size: 0.75rem;
+}
+
+.secao {
+    padding-block: 3.25rem;
+    border-top: 1px solid var(--linha);
+}
+
+.numero-secao {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: var(--secundario);
+}
+
+.secao-conteudo > p {
+    color: var(--secundario);
+}
+
+.secao-conteudo > .texto-destaque {
+    margin-bottom: 1.5rem;
+    color: var(--texto);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    letter-spacing: -0.025em;
+}
+
+.formacao-bloco {
+    padding: 1.75rem;
+    border-left: 3px solid var(--verde);
+    background-color: var(--verde-claro);
+}
+
+.etiqueta {
+    margin-bottom: 1rem;
+    color: var(--verde);
+}
+
+.formacao-bloco h3 + p {
+    margin-top: 0.75rem;
+}
+
+.contato {
+    margin-top: 2rem;
+    padding-block: 4.5rem;
+    background-color: var(--verde);
+    color: var(--superficie);
+}
+
+.contato .sobretitulo {
+    color: var(--acento);
+}
+
+.contato h2 {
+    margin-bottom: 1.25rem;
+    font-size: 2.5rem;
+}
+
+.contato p:not(.sobretitulo) {
+    color: #dde8e0;
+}
+
+.contato-links {
+    font-style: normal;
+}
+
+.contato-links a {
+    display: block;
+    padding-block: 1rem;
+    border-bottom: 1px solid #648876;
+    color: var(--superficie);
+    text-decoration: none;
+}
+
+.contato-links a > span:first-child {
+    display: block;
+    color: #c8ddce;
+    font-size: 0.8rem;
+}
+
+.rodape {
+    padding-block: 1.5rem;
+    color: var(--secundario);
+    font-size: 0.8rem;
+}
+
+/* Cabeçalho posicionado e navegação com Flexbox. */
+html {
+    scroll-padding-top: 110px;
+}
+
+.cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid var(--linha);
+    background-color: var(--fundo);
+}
+
+.cabecalho-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    min-height: 88px;
+}
+
+.marca {
+    flex-shrink: 0;
+    font-size: 1.75rem;
+    font-weight: 750;
+    letter-spacing: -0.08em;
+    text-decoration: none;
+}
+
+.marca span {
+    color: #687947;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem 1.25rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    padding-block: 0.65rem;
+    color: var(--secundario);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: var(--verde);
+    text-decoration: underline;
+}
+
+/* Flexbox também organiza a apresentação, as seções e as experiências. */
+.apresentacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.apresentacao-texto {
+    flex: 1;
+    min-width: 0;
+}
+
+.retrato {
+    flex: 0 0 28%;
+}
+
+.secao {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.secao-titulo {
+    flex: 0 0 27%;
+}
+
+.secao-conteudo {
+    flex: 1;
+    min-width: 0;
+}
+
+.lista-conhecimentos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.lista-conhecimentos li {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--linha);
+    border-radius: 4px;
+    background-color: var(--superficie);
+    font-size: 0.9rem;
+}
+
+.lista-conhecimentos li > span {
+    color: var(--secundario);
+    font-size: 0.7rem;
+}
+
+.lista-projetos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.projeto {
+    flex: 1 1 220px;
+    padding: 1.5rem;
+    border: 1px solid var(--linha);
+    border-radius: 6px;
+    background-color: var(--superficie);
+}
+
+.projeto h3 {
+    margin-bottom: 1rem;
+}
+
+.projeto p:not(.etiqueta) {
+    color: var(--secundario);
+}
+
+.projeto .projeto-temas {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--linha);
+    font-size: 0.75rem;
+}
+
+.contato-conteudo,
+.rodape-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.contato-conteudo > div {
+    flex: 1;
+}
+
+.contato-links {
+    flex: 0 1 360px;
+    min-width: 0;
+}
+
+/* Foco visível e atalho para quem navega pelo teclado. */
+a:focus-visible {
+    outline: 3px solid #835316;
+    outline-offset: 5px;
+    border-radius: 3px;
+}
+
+.contato a:focus-visible {
+    outline-color: var(--acento);
+}
+
+.botao:hover {
+    background-color: #143b30;
+}
+
+.contato-links a:hover,
+.rodape a:hover {
+    text-decoration: underline;
+}
+
+.pular-conteudo {
+    position: fixed;
+    top: -150px;
+    left: 1rem;
+    z-index: 20;
+    padding: 0.75rem 1rem;
+    background-color: var(--superficie);
+    color: var(--verde);
+    font-weight: 700;
+}
+
+.pular-conteudo:focus-visible {
+    top: 1rem;
+}
+
+/* A navegação se reorganiza, sem depender de JavaScript. */
+@media (max-width: 800px) {
+    .container {
+        width: calc(100% - 48px);
+    }
+
+    .cabecalho-conteudo {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 0 1.5rem;
+        padding-block: 0.65rem;
+    }
+
+    .cabecalho nav {
+        flex: 1 1 480px;
+    }
+
+    .menu {
+        gap: 0.1rem 1rem;
+    }
+
+    .apresentacao {
+        gap: 2rem;
+        padding-block: 3rem;
+    }
+
+    .retrato {
+        flex-basis: 32%;
+    }
+
+    .secao {
+        gap: 1.75rem;
+    }
+
+    .secao-titulo {
+        flex-basis: 30%;
+    }
+
+    .contato-conteudo {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .contato-links {
+        flex-basis: auto;
+        max-width: 480px;
+    }
+}
+
+@media (max-width: 560px) {
+    html {
+        scroll-padding-top: 175px;
+    }
+
+    h1 {
+        font-size: 2.75rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .apresentacao,
+    .secao,
+    .rodape-conteudo {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .apresentacao {
+        gap: 2.5rem;
+    }
+
+    .retrato {
+        width: 100%;
+        max-width: 260px;
+        align-self: center;
+        flex-basis: auto;
+    }
+
+    .secao {
+        gap: 1.5rem;
+        padding-block: 2.5rem;
+    }
+
+    .secao-titulo {
+        flex-basis: auto;
+    }
+
+    .secao-conteudo > .texto-destaque {
+        font-size: 1.25rem;
+    }
+
+    .formacao-bloco,
+    .projeto {
+        padding: 1.25rem;
+    }
+
+    .contato {
+        padding-block: 3rem;
+    }
+
+    .contato h2 {
+        font-size: 2rem;
+    }
+
+    .rodape-conteudo {
+        gap: 0.75rem;
+    }
+}
