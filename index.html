@@ -1,71 +1,126 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
-    <title>Portfólio Guilherme</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Guilherme Sanson Malacarne, estudante de Análise e Desenvolvimento de Sistemas com conhecimentos em manutenção de computadores e suporte técnico.">
+    <title>Guilherme Sanson Malacarne | Portfólio</title>
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
-
 <body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
 
-    <h1>Guilherme Sanson Malacarne</h1>
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a class="marca" href="#inicio" aria-label="Guilherme Sanson — início">GS<span aria-hidden="true">.</span></a>
+            <nav aria-label="Navegação principal">
+                <ul class="menu">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#formacao">Formação</a></li>
+                    <li><a href="#conhecimentos">Conhecimentos</a></li>
+                    <li><a href="#projetos">Experiências</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <img src="foto.jpg" alt="Foto de Guilherme" width="200">
+    <main id="conteudo">
+        <section class="apresentacao container" id="inicio" aria-labelledby="titulo-principal">
+            <div class="apresentacao-texto">
+                <p class="sobretitulo">Tecnologia, aprendizado e prática</p>
+                <h1 id="titulo-principal">Guilherme Sanson <span>Malacarne.</span></h1>
+                <p class="apresentacao-resumo">Estudante de Análise e Desenvolvimento de Sistemas, com interesse em tecnologia e suporte técnico.</p>
+                <a class="botao" href="#contato">Entre em contato <span aria-hidden="true">↗</span></a>
+            </div>
+            <figure class="retrato">
+                <img src="img/foto.jpg" alt="Retrato de Guilherme Sanson Malacarne" width="630" height="939">
+                <figcaption>Aprendendo e construindo, um passo de cada vez.</figcaption>
+            </figure>
+        </section>
 
-    <h2>Sobre mim</h2>
+        <div class="container secoes">
+            <section class="secao sobre" id="sobre" aria-labelledby="titulo-sobre">
+                <div class="secao-titulo">
+                    <span class="numero-secao" aria-hidden="true">01 /</span>
+                    <h2 id="titulo-sobre">Sobre mim</h2>
+                </div>
+                <div class="secao-conteudo">
+                    <p class="texto-destaque">Meu interesse por tecnologia conecta o aprendizado da faculdade à prática com computadores.</p>
+                    <p>Meu nome é Guilherme Sanson Malacarne e curso Análise e Desenvolvimento de Sistemas. Atualmente estou no 4º período.</p>
+                    <p>Tenho interesse na área de tecnologia e possuo conhecimentos em manutenção de computadores e suporte técnico N1 e N2.</p>
+                </div>
+            </section>
 
-    <p>
-        Meu nome é Guilherme Sanson Malacarne e curso Análise e
-        Desenvolvimento de Sistemas. Atualmente estou no 4º período.
-    </p>
+            <section class="secao" id="formacao" aria-labelledby="titulo-formacao">
+                <div class="secao-titulo">
+                    <span class="numero-secao" aria-hidden="true">02 /</span>
+                    <h2 id="titulo-formacao">Formação</h2>
+                </div>
+                <div class="secao-conteudo formacao-bloco">
+                    <p class="etiqueta">Graduação em andamento</p>
+                    <h3>Análise e Desenvolvimento de Sistemas</h3>
+                    <p>4º período</p>
+                </div>
+            </section>
 
-    <p>
-        Tenho interesse na área de tecnologia e possuo conhecimentos
-        em manutenção de computadores e suporte técnico N1 e N2.
-    </p>
+            <section class="secao" id="conhecimentos" aria-labelledby="titulo-conhecimentos">
+                <div class="secao-titulo">
+                    <span class="numero-secao" aria-hidden="true">03 /</span>
+                    <h2 id="titulo-conhecimentos">Conhecimentos</h2>
+                </div>
+                <div class="secao-conteudo">
+                    <p>Áreas de conhecimento que fazem parte da minha trajetória.</p>
+                    <ul class="lista-conhecimentos">
+                        <li><span aria-hidden="true">01</span> Manutenção de computadores</li>
+                        <li><span aria-hidden="true">02</span> Suporte técnico N1</li>
+                        <li><span aria-hidden="true">03</span> Suporte técnico N2</li>
+                    </ul>
+                </div>
+            </section>
 
-    <h2>Formação</h2>
+            <section class="secao" id="projetos" aria-labelledby="titulo-projetos">
+                <div class="secao-titulo">
+                    <span class="numero-secao" aria-hidden="true">04 /</span>
+                    <h2 id="titulo-projetos">Projetos e experiências</h2>
+                </div>
+                <div class="secao-conteudo lista-projetos">
+                    <article class="projeto">
+                        <p class="etiqueta">Na faculdade</p>
+                        <h3>Atividades acadêmicas</h3>
+                        <p>Durante a faculdade participei de atividades envolvendo programação, desenvolvimento de sistemas e modelagem.</p>
+                        <p class="projeto-temas">Programação · Sistemas · Modelagem</p>
+                    </article>
+                    <article class="projeto">
+                        <p class="etiqueta">Conhecimento prático</p>
+                        <h3>Suporte e manutenção</h3>
+                        <p>Também possuo conhecimentos em manutenção de computadores e atendimento de suporte técnico.</p>
+                        <p class="projeto-temas">Computadores · Suporte N1 e N2</p>
+                    </article>
+                </div>
+            </section>
+        </div>
 
-    <p>
-        Análise e Desenvolvimento de Sistemas - 4º período.
-    </p>
+        <section class="contato" id="contato" aria-labelledby="titulo-contato">
+            <div class="container contato-conteudo">
+                <div>
+                    <p class="sobretitulo">Vamos conversar?</p>
+                    <h2 id="titulo-contato">Uma boa conexão<br>começa com um olá.</h2>
+                    <p>Você pode falar comigo por e-mail ou pelo LinkedIn.</p>
+                </div>
+                <address class="contato-links">
+                    <a href="mailto:guilhermesanson3@gmail.com"><span>E-mail</span>guilhermesanson3@gmail.com <span aria-hidden="true">↗</span></a>
+                    <a href="https://www.linkedin.com/in/guilherme-sanson-a89b0a310/"><span>LinkedIn</span>Guilherme Sanson <span aria-hidden="true">↗</span></a>
+                </address>
+            </div>
+        </section>
+    </main>
 
-    <h2>Conhecimentos</h2>
-
-    <ul>
-        <li>Manutenção de computadores</li>
-        <li>Suporte técnico N1</li>
-        <li>Suporte técnico N2</li>
-    </ul>
-
-    <h2>Projetos e experiências</h2>
-
-    <p>
-        Durante a faculdade participei de atividades envolvendo
-        programação, desenvolvimento de sistemas e modelagem.
-    </p>
-
-    <p>
-        Também possuo conhecimentos em manutenção de computadores
-        e atendimento de suporte técnico.
-    </p>
-
-    <h2>Contato</h2>
-
-    <p>
-        E-mail:
-        <a href="mailto:guilhermesanson3@gmail.com">
-            guilhermesanson3@gmail.com
-        </a>
-    </p>
-
-    <p>
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/guilherme-sanson-a89b0a310/">
-            Meu LinkedIn
-        </a>
-    </p>
-
+    <footer class="rodape">
+        <div class="container rodape-conteudo">
+            <p>Guilherme Sanson Malacarne · Portfólio pessoal</p>
+            <a href="#inicio">Voltar ao início <span aria-hidden="true">↑</span></a>
+        </div>
+    </footer>
 </body>
-
 </html>
